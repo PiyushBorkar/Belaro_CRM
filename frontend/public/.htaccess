@@ -1,0 +1,8 @@
+# React Router uses real paths (/projects/12). Send any path that is not an
+# existing file or folder to index.html so the app can render it.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>
